@@ -7,7 +7,7 @@
       "type": "minecraft:multi_noise",
       "biomes": [
         {
-          "biome": "osiris:osiris_ocean",
+          "biome": "osiris:osiris_surface",
           "parameters": {
             "temperature": 0.0,
             "humidity": 0.0,

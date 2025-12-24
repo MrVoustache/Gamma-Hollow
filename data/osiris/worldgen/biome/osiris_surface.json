@@ -25,6 +25,8 @@
   },
   "features": [
     [
+      "osiris:large_basalt_pillar",
+      "osiris:normal_basalt_pillar"
     ]
   ],
   "spawn_costs": {},
