@@ -1,0 +1,18 @@
+{
+    "display": {
+        "title": "Titan",
+        "description": "Enter a new mining world, below the scorched surface of Titan!",
+        "icon": {
+            "item": "minecraft:player_head",
+            "nbt": "{SkullOwner: 'MrVoustache'}"
+        },
+        "show_toast": false,
+        "announce_to_chat": false
+    },
+    "parent": "global:root",
+    "criteria": {
+        "trigger": {
+            "trigger": "minecraft:tick"
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:mul",
+    "argument1": {
+    "type": "minecraft:mul",
+    "argument1": {
+        "type": "minecraft:y_clamped_gradient",
+        "from_y": 550,
+        "to_y": 650,
+        "from_value": 0,
+        "to_value": 1
+    },
+    "argument2": {
+        "type": "minecraft:y_clamped_gradient",
+        "from_y": 650,
+        "to_y": 775,
+        "from_value": 1,
+        "to_value": 0
+    }
+    },
+    "argument2": {
+        "type": "minecraft:constant",
+        "argument": 0.05
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:mul",
+    "argument1": {
+    "type": "minecraft:mul",
+    "argument1": {
+        "type": "minecraft:y_clamped_gradient",
+        "from_y": 400,
+        "to_y": 550,
+        "from_value": 0,
+        "to_value": 1
+    },
+    "argument2": {
+        "type": "minecraft:y_clamped_gradient",
+        "from_y": 550,
+        "to_y": 650,
+        "from_value": 1,
+        "to_value": 0
+    }
+    },
+    "argument2": {
+        "type": "minecraft:noise",
+        "noise": "minecraft:cave_cheese",
+        "xz_scale": 10,
+        "y_scale": 10
+    }
+}
