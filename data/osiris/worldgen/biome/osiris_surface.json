@@ -25,6 +25,9 @@
   },
   "features": [
     [
+      "osiris:lake_lava_surface"
+    ],
+    [
       "osiris:large_basalt_pillar",
       "osiris:normal_basalt_pillar",
       "osiris:small_basalt_pillar"
