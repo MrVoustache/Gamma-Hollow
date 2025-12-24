@@ -1,9 +1,9 @@
 {
-  "feature": "osiris:large_basalt_pillar",
+  "feature": "osiris:small_basalt_pillar",
   "placement": [
     {
       "type": "minecraft:count",
-      "count": 150
+      "count": 256
     },
     {
       "type": "minecraft:in_square"
