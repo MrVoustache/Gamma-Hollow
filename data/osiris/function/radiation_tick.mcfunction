@@ -8,7 +8,7 @@ tag @e[scores={radiation_timer=..2147483647}] add has_timer
 execute as @e[predicate=osiris:exposed_to_cosmic_rays, tag=!has_timer] run scoreboard players set @s radiation_timer 0
 
 # 4. The logic from before: hit those at 0 and start timer
-execute as @e[predicate=osiris:exposed_to_cosmic_rays, scores={radiation_timer=..0}] at @s run function osiris:trigger_damage
+execute as @e[predicate=osiris:exposed_to_cosmic_rays, scores={radiation_timer=..0}] unless entity @s[type=player, gamemode=creative] unless entity @s[type=player, gamemode=spectator] at @s run function osiris:trigger_damage
 
 # 5. Countdown
 execute as @e[scores={radiation_timer=1..}] run scoreboard players remove @s radiation_timer 1
