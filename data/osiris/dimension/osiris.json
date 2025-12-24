@@ -31,7 +31,7 @@
           }
         },
         {
-          "biome": "minecraft:dripstone_caves",
+          "biome": "osiris:dripstone_caves",
           "parameters": {
             "temperature": 0.0,
             "humidity": 0.7,
@@ -43,7 +43,7 @@
           }
         },
         {
-          "biome": "minecraft:deep_dark",
+          "biome": "osiris:deep_dark",
           "parameters": {
             "temperature": 0.1,
             "humidity": 0.5,
