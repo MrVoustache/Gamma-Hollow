@@ -56,9 +56,11 @@
     },
     "ridges": "minecraft:overworld/ridges",
     "initial_density_without_jaggedness": {
-      "type": "minecraft:add",
-      "argument1": "osiris:sea_floor",
-      "argument2": "osiris:sea_bed"
+      "type": "minecraft:y_clamped_gradient",
+      "from_y": 400,
+      "to_y": 550,
+      "from_value": -1,
+      "to_value": 1
     },
     "final_density": {
       "type": "minecraft:add",
@@ -85,13 +87,13 @@
   },
   "spawn_target": [
     {
-      "temperature": 0,
-      "humidity": 0,
-      "continentalness": 0,
-      "erosion": 0,
-      "weirdness": 0,
-      "depth": 1.0,
-      "offset": 0
+      "temperature": 0.1,
+      "humidity": 1.0,
+      "continentalness": 0.0,
+      "erosion": 0.0,
+      "weirdness": 0.0,
+      "depth": -0.9,
+      "offset": 0.0
     }
   ],
   "surface_rule": {
