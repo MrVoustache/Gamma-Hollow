@@ -1,0 +1,85 @@
+{
+  "dimensions": {
+    "minecraft:overworld": {
+      "type": "osiris:osiris_world",
+      "generator": {
+        "type": "minecraft:noise",
+        "settings": "osiris:osiris_underground",
+        "biome_source": {
+          "type": "minecraft:multi_noise",
+          "biomes": [
+                {
+                "biome": "osiris:osiris_surface",
+                "parameters": {
+                    "temperature": 0.0,
+                    "humidity": 0.0,
+                    "continentalness": -0.8,
+                    "erosion": 0.0,
+                    "weirdness": 0.0,
+                    "depth": -1.0,
+                    "offset": 0.0
+                }
+                },
+                {
+                "biome": "osiris:lush_caves",
+                "parameters": {
+                    "temperature": 0.1,
+                    "humidity": 0.7,
+                    "continentalness": 0.0,
+                    "erosion": 0.0,
+                    "weirdness": 0.5,
+                    "depth": 0.8,
+                    "offset": 0.0
+                }
+                },
+                {
+                "biome": "osiris:dripstone_caves",
+                "parameters": {
+                    "temperature": 0.0,
+                    "humidity": 0.7,
+                    "continentalness": 0.0,
+                    "erosion": 0.0,
+                    "weirdness": 0.5,
+                    "depth": 1.5,
+                    "offset": 0.0
+                }
+                },
+                {
+                "biome": "osiris:deep_dark",
+                "parameters": {
+                    "temperature": 0.1,
+                    "humidity": 0.5,
+                    "continentalness": 0.0,
+                    "erosion": 0.0,
+                    "weirdness": 0.8,
+                    "depth": 1.9,
+                    "offset": 0.0
+                }
+                }
+            ]
+        }
+      }
+    },
+    "minecraft:the_end": {
+      "type": "minecraft:the_end",
+      "generator": {
+        "type": "minecraft:noise",
+        "biome_source": {
+          "type": "minecraft:the_end"
+        },
+        "settings": "minecraft:end"
+      }
+    },
+    "minecraft:the_nether": {
+      "type": "minecraft:the_nether",
+      "generator": {
+        "type": "minecraft:noise",
+        "biome_source": {
+          "type": "minecraft:multi_noise",
+          "preset": "minecraft:nether"
+        },
+        "settings": "minecraft:nether"
+      }
+    }
+  }
+}
