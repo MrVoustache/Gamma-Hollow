@@ -1,13 +1,9 @@
 {
-  "feature": "osiris:ore_copper_small",
+  "feature": "osiris:ore_coal_normal",
   "placement": [
     {
       "type": "minecraft:count",
-      "count": 50
-    },
-    {
-      "type": "minecraft:count",
-      "count": 10
+      "count": 100
     },
     {
       "type": "minecraft:in_square"
@@ -17,18 +13,7 @@
       "height": {
         "type": "minecraft:weighted_list",
         "distribution": [
-          {
-            "weight": 9,
-            "data": {
-              "type": "minecraft:uniform",
-              "min_inclusive": {
-                "absolute": 0
-              },
-              "max_inclusive": {
-                "absolute": 400
-              }
-            }
-          },
+          
           {
             "weight": 1,
             "data": {
@@ -37,7 +22,7 @@
                 "absolute": 350
               },
               "max_inclusive": {
-                "absolute": 600
+                "absolute": 550
               }
             }
           }

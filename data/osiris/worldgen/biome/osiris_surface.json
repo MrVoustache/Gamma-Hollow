@@ -28,9 +28,41 @@
       "osiris:lake_lava_surface"
     ],
     [
-      "osiris:large_basalt_pillar",
+      "osiris:ore_copper_small",
+      "osiris:ore_copper_normal",
+      "osiris:ore_copper_bigger"
+    ],
+    [
+      "osiris:ore_andesite_normal",
+      "osiris:ore_copper_small",
+      "osiris:ore_copper_normal",
+      "osiris:ore_copper_bigger",
+      "osiris:ore_diamond_small",
+      "osiris:ore_diamond_normal",
+      "osiris:ore_diamond_bigger",
+      "osiris:ore_diorite_normal",
+      "osiris:ore_emerald_small",
+      "osiris:ore_emerald_normal",
+      "osiris:ore_emerald_bigger",
+      "osiris:ore_gold_small",
+      "osiris:ore_gold_normal",
+      "osiris:ore_gold_bigger",
+      "osiris:ore_granite_normal",
+      "osiris:ore_iron_small",
+      "osiris:ore_iron_normal",
+      "osiris:ore_iron_bigger",
+      "osiris:ore_lapis_small",
+      "osiris:ore_lapis_normal",
+      "osiris:ore_lapis_bigger",
+      "osiris:ore_redstone_small",
+      "osiris:ore_redstone_normal",
+      "osiris:ore_redstone_bigger",
+      "osiris:ore_sand_normal"
+    ],
+    [
+      "osiris:small_basalt_pillar",
       "osiris:normal_basalt_pillar",
-      "osiris:small_basalt_pillar"
+      "osiris:large_basalt_pillar"
     ]
   ],
   "spawn_costs": {},

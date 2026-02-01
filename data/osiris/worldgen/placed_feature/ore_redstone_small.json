@@ -1,5 +1,5 @@
 {
-  "feature": "osiris:ore_copper_small",
+  "feature": "osiris:ore_redstone_small",
   "placement": [
     {
       "type": "minecraft:count",
@@ -25,7 +25,7 @@
                 "absolute": 0
               },
               "max_inclusive": {
-                "absolute": 400
+                "absolute": 250
               }
             }
           },
@@ -34,10 +34,10 @@
             "data": {
               "type": "minecraft:trapezoid",
               "min_inclusive": {
-                "absolute": 350
+                "absolute": 200
               },
               "max_inclusive": {
-                "absolute": 600
+                "absolute": 400
               }
             }
           }

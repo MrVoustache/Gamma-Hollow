@@ -1,13 +1,9 @@
 {
-  "feature": "osiris:ore_copper_small",
+  "feature": "osiris:ore_diamond_bigger",
   "placement": [
     {
       "type": "minecraft:count",
-      "count": 50
-    },
-    {
-      "type": "minecraft:count",
-      "count": 10
+      "count": 5
     },
     {
       "type": "minecraft:in_square"
@@ -18,26 +14,14 @@
         "type": "minecraft:weighted_list",
         "distribution": [
           {
-            "weight": 9,
-            "data": {
-              "type": "minecraft:uniform",
-              "min_inclusive": {
-                "absolute": 0
-              },
-              "max_inclusive": {
-                "absolute": 400
-              }
-            }
-          },
-          {
             "weight": 1,
             "data": {
               "type": "minecraft:trapezoid",
               "min_inclusive": {
-                "absolute": 350
+                "absolute": 0
               },
               "max_inclusive": {
-                "absolute": 600
+                "absolute": 200
               }
             }
           }
