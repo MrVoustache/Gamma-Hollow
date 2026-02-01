@@ -1,0 +1,90 @@
+{
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon"
+    ]
+  },
+  "downfall": 0.4,
+  "effects": {
+    "fog_color": 12638463,
+    "mood_sound": {
+      "block_search_extent": 8,
+      "offset": 2,
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000
+    },
+    "music": {
+      "max_delay": 24000,
+      "min_delay": 12000,
+      "replace_current_music": false,
+      "sound": "minecraft:music.overworld.deep_dark"
+    },
+    "sky_color": 7907327,
+    "water_color": 4159204,
+    "water_fog_color": 329011
+  },
+  "features": [
+    [],
+    [],
+    [
+      "gamma:amethyst_geode"
+    ],
+    [
+    ],
+    [],
+    [],
+    [
+      "gamma:ore_andesite_normal",
+      "gamma:ore_copper_small",
+      "gamma:ore_copper_normal",
+      "gamma:ore_copper_bigger",
+      "gamma:ore_diamond_small",
+      "gamma:ore_diamond_normal",
+      "gamma:ore_diamond_bigger",
+      "gamma:ore_emerald_small",
+      "gamma:ore_emerald_normal",
+      "gamma:ore_emerald_bigger",
+      "gamma:ore_gold_small",
+      "gamma:ore_gold_normal",
+      "gamma:ore_gold_bigger",
+      "gamma:ore_iron_small",
+      "gamma:ore_iron_normal",
+      "gamma:ore_iron_bigger",
+      "gamma:ore_lapis_small",
+      "gamma:ore_lapis_normal",
+      "gamma:ore_lapis_bigger",
+      "gamma:ore_redstone_small",
+      "gamma:ore_redstone_normal",
+      "gamma:ore_redstone_bigger"
+    ],
+    [
+      "gamma:sculk_vein",
+      "gamma:sculk_patch_deep_dark"
+    ],
+    [],
+    [
+      "gamma:glow_lichen",
+      "gamma:patch_tall_grass",
+      "gamma:brown_mushroom_normal",
+      "gamma:red_mushroom_normal"
+    ],
+    [
+      "minecraft:freeze_top_layer"
+    ]
+  ],
+  "has_precipitation": true,
+  "spawn_costs": {},
+  "spawners": {
+    "ambient": [],
+    "axolotls": [],
+    "creature": [],
+    "misc": [],
+    "monster": [],
+    "underground_water_creature": [],
+    "water_ambient": [],
+    "water_creature": []
+  },
+  "temperature": 0.8
+}

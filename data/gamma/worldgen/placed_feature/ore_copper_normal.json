@@ -1,0 +1,47 @@
+{
+  "feature": "gamma:ore_copper_normal",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 100
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:weighted_list",
+        "distribution": [
+          {
+            "weight": 24,
+            "data": {
+              "type": "minecraft:uniform",
+              "min_inclusive": {
+                "absolute": 0
+              },
+              "max_inclusive": {
+                "absolute": 300
+              }
+            }
+          },
+          {
+            "weight": 1,
+            "data": {
+              "type": "minecraft:trapezoid",
+              "min_inclusive": {
+                "absolute": 250
+              },
+              "max_inclusive": {
+                "absolute": 600
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

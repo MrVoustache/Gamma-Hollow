@@ -1,7 +1,0 @@
-{
-  "condition": "minecraft:location_check",
-  "predicate": {
-    "dimension": "osiris:osiris",
-    "can_see_sky": true
-  }
-}
