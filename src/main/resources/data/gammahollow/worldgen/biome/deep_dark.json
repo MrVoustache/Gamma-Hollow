@@ -1,0 +1,90 @@
+{
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon"
+    ]
+  },
+  "downfall": 0.4,
+  "effects": {
+    "fog_color": 12638463,
+    "mood_sound": {
+      "block_search_extent": 8,
+      "offset": 2,
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000
+    },
+    "music": {
+      "max_delay": 24000,
+      "min_delay": 12000,
+      "replace_current_music": false,
+      "sound": "minecraft:music.overworld.deep_dark"
+    },
+    "sky_color": 7907327,
+    "water_color": 4159204,
+    "water_fog_color": 329011
+  },
+  "features": [
+    [],
+    [],
+    [
+      "gammahollow:amethyst_geode"
+    ],
+    [
+    ],
+    [],
+    [],
+    [
+      "gammahollow:ore_andesite_normal",
+      "gammahollow:ore_copper_small",
+      "gammahollow:ore_copper_normal",
+      "gammahollow:ore_copper_bigger",
+      "gammahollow:ore_diamond_small",
+      "gammahollow:ore_diamond_normal",
+      "gammahollow:ore_diamond_bigger",
+      "gammahollow:ore_emerald_small",
+      "gammahollow:ore_emerald_normal",
+      "gammahollow:ore_emerald_bigger",
+      "gammahollow:ore_gold_small",
+      "gammahollow:ore_gold_normal",
+      "gammahollow:ore_gold_bigger",
+      "gammahollow:ore_iron_small",
+      "gammahollow:ore_iron_normal",
+      "gammahollow:ore_iron_bigger",
+      "gammahollow:ore_lapis_small",
+      "gammahollow:ore_lapis_normal",
+      "gammahollow:ore_lapis_bigger",
+      "gammahollow:ore_redstone_small",
+      "gammahollow:ore_redstone_normal",
+      "gammahollow:ore_redstone_bigger"
+    ],
+    [
+      "gammahollow:sculk_vein",
+      "gammahollow:sculk_patch_deep_dark"
+    ],
+    [],
+    [
+      "gammahollow:glow_lichen",
+      "gammahollow:patch_tall_grass",
+      "gammahollow:brown_mushroom_normal",
+      "gammahollow:red_mushroom_normal"
+    ],
+    [
+      "minecraft:freeze_top_layer"
+    ]
+  ],
+  "has_precipitation": true,
+  "spawn_costs": {},
+  "spawners": {
+    "ambient": [],
+    "axolotls": [],
+    "creature": [],
+    "misc": [],
+    "monster": [],
+    "underground_water_creature": [],
+    "water_ambient": [],
+    "water_creature": []
+  },
+  "temperature": 0.8
+}

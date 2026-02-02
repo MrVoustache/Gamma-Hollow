@@ -1,7 +1,0 @@
-{
-  "condition": "minecraft:location_check",
-  "predicate": {
-    "dimension": "gamma:gamma",
-    "can_see_sky": true
-  }
-}

@@ -1,0 +1,191 @@
+{
+  "sea_level": 78,
+  "disable_mob_generation": false,
+  "aquifers_enabled": true,
+  "ore_veins_enabled": true,
+  "legacy_random_source": false,
+  "default_block": {
+    "Name": "minecraft:stone"
+  },
+  "default_fluid": {
+    "Name": "minecraft:lava"
+  },
+  "noise": {
+    "min_y": 0,
+    "height": 1024,
+    "size_horizontal": 1,
+    "size_vertical": 2
+  },
+  "noise_router": {
+    "barrier": 1,
+    "lava_barrier": 1,
+    "lava": 1.0,
+    "fluid_level_spread": 0.0,
+    "vein_toggle": 0,
+    "vein_ridged": 0,
+    "vein_gap": 0,
+    "temperature": {
+      "type": "minecraft:noise",
+      "noise": "minecraft:jagged",
+      "xz_scale": 10,
+      "y_scale": 10
+    },
+    "vegetation": {
+      "type": "minecraft:mul",
+      "argument1": {
+        "type": "minecraft:noise",
+        "noise": "minecraft:jagged",
+        "xz_scale": 10,
+        "y_scale": 10
+      },
+      "argument2": {
+        "type": "minecraft:noise",
+        "noise": "minecraft:erosion_large",
+        "xz_scale": 10,
+        "y_scale": 10
+      }
+    },
+    "continents": "minecraft:overworld/continents",
+    "erosion": "minecraft:overworld/erosion",
+    "depth": {
+      "type": "minecraft:y_clamped_gradient",
+      "from_y": 64,
+      "to_y": 768,
+      "from_value": 2.0,
+      "to_value": -1.0
+    },
+    "ridges": "minecraft:overworld/ridges",
+    "initial_density_without_jaggedness": {
+      "type": "minecraft:y_clamped_gradient",
+      "from_y": 400,
+      "to_y": 550,
+      "from_value": -1,
+      "to_value": 1
+    },
+    "final_density": {
+      "type": "minecraft:add",
+      "argument1": {
+        "type": "minecraft:add",
+        "argument1": {
+          "type": "minecraft:add",
+          "argument1": {
+            "type": "minecraft:add",
+            "argument1": {
+              "type": "minecraft:add",
+              "argument1": "gammahollow:bedrock",
+              "argument2": "gammahollow:cheese_caves"
+            },
+            "argument2": "gammahollow:upper_caves"
+          },
+          "argument2": "gammahollow:sea_bed"
+        },
+        "argument2": "gammahollow:sea_floor"
+      },
+      "argument2": "gammahollow:sky"
+    },
+    "fluid_level_floodedness": 0.0
+  },
+  "spawn_target": [
+    {
+      "temperature": 0.1,
+      "humidity": 1.0,
+      "continentalness": 0.0,
+      "erosion": 0.0,
+      "weirdness": 0.0,
+      "depth": -0.9,
+      "offset": 0.0
+    }
+  ],
+  "surface_rule": {
+    "type": "minecraft:sequence",
+    "sequence": [
+
+      {
+        "type": "minecraft:condition",
+        "if_true": {
+          "type": "minecraft:vertical_gradient",
+          "random_name": "minecraft:bedrock_floor",
+          "true_at_and_below": { "above_bottom": 0 },
+          "false_at_and_above": { "above_bottom": 5 }
+        },
+        "then_run": { "type": "minecraft:block", "result_state": { "Name": "minecraft:bedrock" } }
+      },
+
+      {
+        "type": "minecraft:condition",
+        "if_true": {
+          "type": "minecraft:not",
+          "invert": {
+            "type": "minecraft:y_above",
+            "anchor": {
+              "above_bottom": 150
+            },
+            "surface_depth_multiplier": 5,
+            "add_stone_depth": false
+          }
+        },
+        "then_run": {
+          "type": "minecraft:block",
+          "result_state": {
+            "Name": "minecraft:deepslate"
+          }
+        }
+      },
+
+      {
+        "type": "minecraft:condition",
+        "if_true": {
+          "type": "minecraft:y_above",
+          "anchor": {
+            "above_bottom": 750
+          },
+          "surface_depth_multiplier": -15,
+          "add_stone_depth": false
+        },
+        "then_run": {
+          "type": "minecraft:block",
+          "result_state": {
+            "Name": "minecraft:smooth_basalt"
+          }
+        }
+      },
+
+      {
+        "type": "minecraft:condition",
+        "if_true": {
+          "type": "minecraft:y_above",
+          "anchor": {
+            "above_bottom": 660
+          },
+          "surface_depth_multiplier": -15,
+          "add_stone_depth": false
+        },
+        "then_run": {
+          "type": "minecraft:block",
+          "result_state": {
+            "Name": "minecraft:blackstone"
+          }
+        }
+      },
+
+      {
+        "type": "minecraft:condition",
+        "if_true": {
+          "type": "minecraft:y_above",
+          "anchor": {
+            "above_bottom": 550
+          },
+          "surface_depth_multiplier": -15,
+          "add_stone_depth": false
+        },
+        "then_run": {
+          "type": "minecraft:block",
+          "result_state": {
+            "Name": "minecraft:smooth_basalt"
+          }
+        }
+      }
+
+    ]
+  }
+}

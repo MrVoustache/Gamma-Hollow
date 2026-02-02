@@ -1,0 +1,70 @@
+{
+  "has_precipitation": false,
+  "temperature": 2.0,
+  "downfall": 1.0,
+  "creature_spawn_probability": 0.02,
+  "effects": {
+    "sky_color": 0,
+    "fog_color": 0,
+    "water_color": 0,
+    "water_fog_color": 0,
+    "ambient_sound": "minecraft:ambient.nether_wastes.loop",
+    "mood_sound": {
+      "sound": "minecraft:ambient.nether_wastes.mood",
+      "tick_delay": 6000,
+      "block_search_extent": 8,
+      "offset": 2
+    }
+  },
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon"
+    ]
+  },
+  "features": [
+    [
+      "gammahollow:lake_lava_surface"
+    ],
+    [
+      "gammahollow:ore_copper_small",
+      "gammahollow:ore_copper_normal",
+      "gammahollow:ore_copper_bigger"
+    ],
+    [
+      "gammahollow:ore_andesite_normal",
+      "gammahollow:ore_copper_small",
+      "gammahollow:ore_copper_normal",
+      "gammahollow:ore_copper_bigger",
+      "gammahollow:ore_diamond_small",
+      "gammahollow:ore_diamond_normal",
+      "gammahollow:ore_diamond_bigger",
+      "gammahollow:ore_diorite_normal",
+      "gammahollow:ore_emerald_small",
+      "gammahollow:ore_emerald_normal",
+      "gammahollow:ore_emerald_bigger",
+      "gammahollow:ore_gold_small",
+      "gammahollow:ore_gold_normal",
+      "gammahollow:ore_gold_bigger",
+      "gammahollow:ore_granite_normal",
+      "gammahollow:ore_iron_small",
+      "gammahollow:ore_iron_normal",
+      "gammahollow:ore_iron_bigger",
+      "gammahollow:ore_lapis_small",
+      "gammahollow:ore_lapis_normal",
+      "gammahollow:ore_lapis_bigger",
+      "gammahollow:ore_redstone_small",
+      "gammahollow:ore_redstone_normal",
+      "gammahollow:ore_redstone_bigger",
+      "gammahollow:ore_sand_normal"
+    ],
+    [
+      "gammahollow:small_basalt_pillar",
+      "gammahollow:normal_basalt_pillar",
+      "gammahollow:large_basalt_pillar"
+    ]
+  ],
+  "spawn_costs": {},
+  "spawners": {}
+}
