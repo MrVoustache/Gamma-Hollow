@@ -25,7 +25,7 @@ public class GammaHollowClient {
     @SubscribeEvent
     static void onClientSetup(FMLClientSetupEvent event) {
         // Some client setup code
-        GammaHollow.LOGGER.info("HELLO FROM CLIENT SETUP");
-        GammaHollow.LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+        // GammaHollow.LOGGER.info("HELLO FROM CLIENT SETUP");
+        // GammaHollow.LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
     }
 }
