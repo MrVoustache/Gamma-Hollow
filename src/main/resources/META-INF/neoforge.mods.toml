@@ -8,3 +8,11 @@ version="1.0.0"
 displayName="Gamma-Hollow"
 authors="MrVoustache"
 description="Discover a new mining world on the Gamma planet, with a complex hollow network of caves and a scorched surface."
+
+# Dependency for Custom Portal API
+[[dependencies.gammahollow]]
+    modId="cpapireforged"
+    type="required"
+    versionRange="[1.2.2,)"
+    ordering="AFTER"
+    side="BOTH"
