@@ -1,6 +1,8 @@
 package com.gammahollow; // Ensure this matches your folder structure
 
 import org.slf4j.Logger;
+
+import com.gammahollow.effect.ModEffects;
 import com.mojang.logging.LogUtils;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
@@ -19,6 +21,7 @@ public class GammaHollow {
 
     public GammaHollow(IEventBus modEventBus) {
         modEventBus.addListener(this::registerPortals);
+        ModEffects.register(modEventBus);
     }
 
     private void registerPortals(CustomPortalRegistrationEvent event) {

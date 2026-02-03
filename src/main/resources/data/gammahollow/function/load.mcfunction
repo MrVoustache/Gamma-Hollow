@@ -1,1 +1,0 @@
-scoreboard objectives add radiation_timer dummy

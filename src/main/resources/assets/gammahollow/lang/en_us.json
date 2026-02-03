@@ -1,13 +1,7 @@
 {
-  "itemGroup.gammahollow": "Example Mod Tab",
-  "block.gammahollow.example_block": "Example Block",
-  "item.gammahollow.example_item": "Example Item",
-
   "gammahollow.configuration.title": "Gamma-Hollow Configs",
   "gammahollow.configuration.section.gammahollow.common.toml": "Gamma-Hollow Configs",
   "gammahollow.configuration.section.gammahollow.common.toml.title": "Gamma-Hollow Configs",
-  "gammahollow.configuration.items": "Item List",
-  "gammahollow.configuration.logDirtBlock": "Log Dirt Block",
-  "gammahollow.configuration.magicNumberIntroduction": "Magic Number Text",
-  "gammahollow.configuration.magicNumber": "Magic Number"
+  "effect.gammahollow.radiation": "Radiation",
+  "effect.gammahollow.radiation.description": "You have been exposed to hazardous cosmic rays."
 }
