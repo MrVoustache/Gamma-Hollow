@@ -8,7 +8,9 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
@@ -19,9 +21,10 @@ public class GammaHollow {
     public static final String MODID = "gammahollow";
     public static final Logger LOGGER = LogUtils.getLogger();
 
-    public GammaHollow(IEventBus modEventBus) {
+    public GammaHollow(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::registerPortals);
         ModEffects.register(modEventBus);
+        modContainer.registerConfig(ModConfig.Type.CLIENT, Config.SPEC);
     }
 
     private void registerPortals(CustomPortalRegistrationEvent event) {

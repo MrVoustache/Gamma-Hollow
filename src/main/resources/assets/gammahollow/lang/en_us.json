@@ -3,5 +3,6 @@
   "gammahollow.configuration.section.gammahollow.common.toml": "Gamma-Hollow Configs",
   "gammahollow.configuration.section.gammahollow.common.toml.title": "Gamma-Hollow Configs",
   "effect.gammahollow.radiation": "Radiation",
-  "effect.gammahollow.radiation.description": "You have been exposed to hazardous cosmic rays."
+  "effect.gammahollow.radiation.description": "You have been exposed to hazardous cosmic rays.",
+  "gammahollow.configuration.enableRadiationFlashes": "Enable Radiation Flashes"
 }

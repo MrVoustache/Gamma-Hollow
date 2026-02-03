@@ -30,7 +30,7 @@ public class ExposureEventHandler {
                 if (!entity.hasEffect(ModEffects.RADIATION)) {
                     // Check exposure before giving the "Seed" effect
                     if (RadiationUtils.isExposed(entity.level(), entity.blockPosition())) {
-                        entity.addEffect(new MobEffectInstance(ModEffects.RADIATION, 6000, 0));
+                        entity.addEffect(new MobEffectInstance(ModEffects.RADIATION, 20, 0));
                     }
                 }
             }
