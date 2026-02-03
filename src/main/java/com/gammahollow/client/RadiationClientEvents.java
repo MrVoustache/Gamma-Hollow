@@ -1,9 +1,10 @@
-package com.gammahollow.effect;
+package com.gammahollow.client;
 
 import java.util.Random;
 
 import com.gammahollow.Config;
 import com.gammahollow.GammaHollow;
+import com.gammahollow.effect.ModEffects;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;

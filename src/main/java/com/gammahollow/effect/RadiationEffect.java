@@ -17,15 +17,18 @@ public class RadiationEffect extends MobEffect {
     static int DAMAGE_DELAY_LEVEL_1 = 200; // 10 seconds
     static int DAMAGE_DELAY_LEVEL_2 = 100; // 5 seconds
     static int DAMAGE_DELAY_LEVEL_3 = 20;  // 1 second
+    private int lastDamageTick = 0;
 
     public RadiationEffect() {
         // Reddish-green color for the particles
-        super(MobEffectCategory.HARMFUL, 0x91DB69); 
+        super(MobEffectCategory.HARMFUL, 0x91DB69);
+        this.lastDamageTick = 0;
     }
 
     @Override
     public boolean shouldApplyEffectTickThisTick(int duration, int amplifier) {
         // Logic for damage intervals based on level (amplifier)
+        this.lastDamageTick++;
         return (duration % INCREASE_CKECK_DELAY == 0) || (duration == 1);
     }
 
@@ -36,20 +39,23 @@ public class RadiationEffect extends MobEffect {
 
         int duration = instance.getDuration();
         Level level = entity.level();
-        
+
         // --- DAMAGE LOGIC --- (Intervals)
         boolean shouldDamage = switch (amplifier) {
-            case 1 -> duration % DAMAGE_DELAY_LEVEL_1 == 0; 
-            case 2 -> duration % DAMAGE_DELAY_LEVEL_2 == 0; 
-            case 3 -> duration % DAMAGE_DELAY_LEVEL_3 == 0;  
+            case 1 -> this.lastDamageTick >= DAMAGE_DELAY_LEVEL_1;
+            case 2 -> this.lastDamageTick >= DAMAGE_DELAY_LEVEL_2;
+            case 3 -> this.lastDamageTick >= DAMAGE_DELAY_LEVEL_3;
             default -> false;
         };
-        if (shouldDamage) entity.hurt(entity.damageSources().magic(), 1.0F);
+        if (shouldDamage) {
+            entity.hurt(entity.damageSources().magic(), 1.0F);
+            lastDamageTick = 0; // Reset damage tick counter after applying damage
+        }
 
         // --- SLOWNESS LOGIC ---
         entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 39, amplifier, true, false, false));
         // --- NAUSEA LOGIC ---
-        if (amplifier == 3) entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 39, 0, true, false, false));
+        if (amplifier == 3) entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 59, 0, true, false, false));
 
 
         // --- EFFECT INCREASE LOGIC ---
