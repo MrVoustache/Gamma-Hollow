@@ -1,5 +1,5 @@
 {
-  "sea_level": 78,
+  "sea_level": 48,
   "disable_mob_generation": false,
   "aquifers_enabled": true,
   "ore_veins_enabled": true,
@@ -8,7 +8,7 @@
     "Name": "minecraft:stone"
   },
   "default_fluid": {
-    "Name": "minecraft:lava"
+    "Name": "minecraft:water"
   },
   "noise": {
     "min_y": 0,
