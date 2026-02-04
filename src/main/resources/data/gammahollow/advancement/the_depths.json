@@ -1,0 +1,32 @@
+{
+  "parent": "gammahollow:root",
+  "display": {
+    "icon": {
+      "id": "minecraft:bedrock"
+    },
+    "title": { "translate": "advancements.gammahollow.the_depths.title" },
+    "description": { "translate": "advancements.gammahollow.the_depths.description" },
+    "frame": "challenge",
+    "show_toast": true
+  },
+  "criteria": {
+    "at_bottom": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "position": {
+                "y": {
+                  "max": 75
+                }
+              },
+              "dimension": "gammahollow:gamma"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

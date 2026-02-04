@@ -1,0 +1,28 @@
+{
+  "parent": "gammahollow:root",
+  "display": {
+    "icon": {
+      "id": "minecraft:lava_bucket"
+    },
+    "title": { "translate": "advancements.gammahollow.sky_high.title" },
+    "description": { "translate": "advancements.gammahollow.sky_high.description" },
+    "frame": "challenge",
+    "show_toast": true
+  },
+  "criteria": {
+    "can_see_nebula": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "dimension": "gammahollow:gamma",
+              "can_see_sky": true
+            }
+          }
+        ]
+      }
+    }
+  }
+}

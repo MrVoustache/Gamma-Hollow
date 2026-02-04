@@ -2,9 +2,20 @@
   "gammahollow.configuration.title": "Gamma-Hollow Configs",
   "gammahollow.configuration.section.gammahollow.common.toml": "Gamma-Hollow Configs",
   "gammahollow.configuration.section.gammahollow.common.toml.title": "Gamma-Hollow Configs",
+
   "effect.gammahollow.radiation": "Radiation",
   "effect.gammahollow.radiation.description": "You have been exposed to hazardous cosmic rays.",
   "gammahollow.configuration.enableRadiationFlashes": "Enable Radiation Flashes",
+
   "death.attack.radiation": "%1$s kept stargazing for too long",
-  "death.attack.radiation.item": "%1$s was cosmically slayed by %2$s"
+  "death.attack.radiation.item": "%1$s was cosmically slayed by %2$s",
+
+  "advancements.gammahollow.root.title": "The Hollow Call",
+  "advancements.gammahollow.root.description": "Step into the expanse of Gamma Hollow.",
+  
+  "advancements.gammahollow.the_depths.title": "Deeper!",
+  "advancements.gammahollow.the_depths.description": "Reach the very bottom of the Gamma caves.",
+  
+  "advancements.gammahollow.sky_high.title": "Stargazing",
+  "advancements.gammahollow.sky_high.description": "Survive the lava ceiling and look upon the nebula."
 }
