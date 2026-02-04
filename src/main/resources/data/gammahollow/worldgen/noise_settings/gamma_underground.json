@@ -19,8 +19,10 @@
   "noise_router": {
     "barrier": 1,
     "lava_barrier": 1,
-    "lava": 1.0,
+    "lava": -1.0,
     "fluid_level_spread": 0.0,
+    "fluid_level_floodedness": 1.0,
+    "fluid_level_fluid_level": 48,
     "vein_toggle": 0,
     "vein_ridged": 0,
     "vein_gap": 0,
@@ -82,8 +84,7 @@
         "argument2": "gammahollow:sea_floor"
       },
       "argument2": "gammahollow:sky"
-    },
-    "fluid_level_floodedness": 0.0
+    }
   },
   "spawn_target": [
     {
