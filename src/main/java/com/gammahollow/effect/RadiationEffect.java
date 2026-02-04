@@ -1,7 +1,12 @@
 package com.gammahollow.effect;
 
+import com.gammahollow.GammaHollow;
 import com.gammahollow.util.RadiationUtils;
 
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -28,6 +33,14 @@ public class RadiationEffect extends MobEffect {
         return true;
     }
 
+    private DamageSource getRadiationSource(LivingEntity entity) {
+        // We fetch the custom damage type from the registry using its ResourceLocation
+        var registry = entity.level().registryAccess().registryOrThrow(Registries.DAMAGE_TYPE);
+        var holder = registry.getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.fromNamespaceAndPath(GammaHollow.MODID, "radiation")));
+        
+        return new DamageSource(holder);
+    }
+
     @Override
     public boolean applyEffectTick(LivingEntity entity, int amplifier) {
         MobEffectInstance instance = entity.getEffect(ModEffects.RADIATION);
@@ -43,7 +56,7 @@ public class RadiationEffect extends MobEffect {
         };
 
         if (interval != 0 && time % interval == 0) {
-            entity.hurt(entity.damageSources().magic(), 1.0F);
+            entity.hurt(getRadiationSource(entity), 1.0F);
         }
 
         int duration = instance.getDuration();

@@ -4,5 +4,7 @@
   "gammahollow.configuration.section.gammahollow.common.toml.title": "Gamma-Hollow Configs",
   "effect.gammahollow.radiation": "Radiation",
   "effect.gammahollow.radiation.description": "You have been exposed to hazardous cosmic rays.",
-  "gammahollow.configuration.enableRadiationFlashes": "Enable Radiation Flashes"
+  "gammahollow.configuration.enableRadiationFlashes": "Enable Radiation Flashes",
+  "death.attack.radiation": "%1$s kept stargazing for too long",
+  "death.attack.radiation.item": "%1$s was cosmically slayed by %2$s"
 }
