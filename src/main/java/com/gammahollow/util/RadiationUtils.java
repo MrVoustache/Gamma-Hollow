@@ -74,6 +74,27 @@ public class RadiationUtils {
                         return true;
                     }
                 }
+            } else if (dx == 0) {
+                if (topHeightMap.containsKey(pack(x + 1, z))) {  // Move in +x direction
+                    BlockPos neighbor = new BlockPos(x + 1, y, z);
+                    Integer neighborPacked = packDelta(neighbor.getX() - start_x + 128, neighbor.getY() - start.getY() + 128, neighbor.getZ() - start_z + 128);
+                    if (!visited.contains(neighborPacked) && level.getBlockState(neighbor).isAir()) {
+                        queue.add(neighbor);
+                        if (topHeightMap.get(pack(neighbor.getX(), neighbor.getZ())) <= neighbor.getY()) {
+                            return true;
+                        }
+                    }
+                }
+                if (topHeightMap.containsKey(pack(x - 1, z))) {  // Move in -x direction
+                    BlockPos neighbor = new BlockPos(x - 1, y, z);
+                    Integer neighborPacked = packDelta(neighbor.getX() - start_x + 128, neighbor.getY() - start.getY() + 128, neighbor.getZ() - start_z + 128);
+                    if (!visited.contains(neighborPacked) && level.getBlockState(neighbor).isAir()) {
+                        queue.add(neighbor);
+                        if (topHeightMap.get(pack(neighbor.getX(), neighbor.getZ())) <= neighbor.getY()) {
+                            return true;
+                        }
+                    }
+                }
             }
             if (dz != 0 && topHeightMap.containsKey(pack(x, z + dz))) {  // Move in z direction
                 BlockPos neighbor = new BlockPos(x, y, z + dz);
@@ -84,10 +105,9 @@ public class RadiationUtils {
                         return true;
                     }
                 }
-            }
-            if (dx == 0 && dz == 0) {   // At start position, explore all horizontal directions
-                for (int dx2 : DX) {
-                    BlockPos neighbor = new BlockPos(x + dx2, y, z);
+            } else if (dz == 0) {
+                if (topHeightMap.containsKey(pack(x, z + 1))) {  // Move in +z direction
+                    BlockPos neighbor = new BlockPos(x, y, z + 1);
                     Integer neighborPacked = packDelta(neighbor.getX() - start_x + 128, neighbor.getY() - start.getY() + 128, neighbor.getZ() - start_z + 128);
                     if (!visited.contains(neighborPacked) && level.getBlockState(neighbor).isAir()) {
                         queue.add(neighbor);
@@ -96,8 +116,8 @@ public class RadiationUtils {
                         }
                     }
                 }
-                for (int dz2 : DX) {
-                    BlockPos neighbor = new BlockPos(x, y, z + dz2);
+                if (topHeightMap.containsKey(pack(x, z - 1))) {  // Move in -z direction
+                    BlockPos neighbor = new BlockPos(x, y, z - 1);
                     Integer neighborPacked = packDelta(neighbor.getX() - start_x + 128, neighbor.getY() - start.getY() + 128, neighbor.getZ() - start_z + 128);
                     if (!visited.contains(neighborPacked) && level.getBlockState(neighbor).isAir()) {
                         queue.add(neighbor);
