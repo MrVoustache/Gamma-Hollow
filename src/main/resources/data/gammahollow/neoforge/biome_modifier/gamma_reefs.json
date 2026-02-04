@@ -1,0 +1,11 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "gammahollow:dripstone_caves",
+    "gammahollow:deep_dark"
+  ],
+  "features": [
+    "gammahollow:glow_algea"
+  ],
+  "step": "vegetal_decoration"
+}
