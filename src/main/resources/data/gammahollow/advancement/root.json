@@ -8,7 +8,7 @@
     "background": "block/deepslate.png",
     "show_toast": true,
     "announce_to_chat": true,
-    "frame": "challenge"
+    "frame": "task"
   },
   "criteria": {
     "entered_gamma": {
