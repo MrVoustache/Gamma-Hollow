@@ -4,8 +4,6 @@
     "gammahollow:dripstone_caves",
     "gammahollow:deep_dark"
   ],
-  "features": [
-    "gammahollow:glow_algea"
-  ],
+  "features": "#gammahollow:gamma_reefs",
   "step": "vegetal_decoration"
 }

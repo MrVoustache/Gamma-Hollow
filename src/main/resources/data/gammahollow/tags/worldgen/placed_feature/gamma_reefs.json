@@ -1,0 +1,9 @@
+{
+  "values": [
+    "gammahollow:glow_algea",
+    {
+      "id": "gammahollow:glow_worm",
+      "required": false
+    }
+  ]
+}

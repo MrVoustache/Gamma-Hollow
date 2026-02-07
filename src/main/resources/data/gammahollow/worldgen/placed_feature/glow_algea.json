@@ -14,6 +14,9 @@
       "count": 10
     },
     {
+      "type": "minecraft:in_square"
+    },
+    {
       "type": "minecraft:height_range",
       "height": {
         "type": "minecraft:uniform",
@@ -26,7 +29,13 @@
       }
     },
     {
-      "type": "minecraft:in_square"
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "blocks": [
+          "minecraft:water"
+        ]
+      }
     },
     {
       "type": "minecraft:biome"
