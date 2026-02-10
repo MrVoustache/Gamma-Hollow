@@ -119,7 +119,7 @@
           "invert": {
             "type": "minecraft:y_above",
             "anchor": {
-              "above_bottom": 150
+              "above_bottom": 100
             },
             "surface_depth_multiplier": 5,
             "add_stone_depth": false
