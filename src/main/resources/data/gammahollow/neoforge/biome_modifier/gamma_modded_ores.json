@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_features",
+    "biomes": [
+    "gammahollow:dripstone_caves",
+    "gammahollow:deep_dark",
+    "gammahollow:lush_caves"
+  ], 
+  "features": "#gammahollow:gamma_modded_ores",
+  "step": "underground_ores"
+}

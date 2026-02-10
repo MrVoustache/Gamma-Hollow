@@ -1,10 +1,9 @@
 {
-  "feature": "gammahollow:ore_gold_small",
+  "neoforge:conditions": [
+    { "type": "neoforge:mod_loaded", "modid": "modern_industrialization" }
+  ],
+  "feature": "gammahollow:ore_salt_normal",
   "placement": [
-    {
-      "type": "minecraft:count",
-      "count": 40
-    },
     {
       "type": "minecraft:count",
       "count": 10
@@ -18,14 +17,26 @@
         "type": "minecraft:weighted_list",
         "distribution": [
           {
+            "weight": 24,
+            "data": {
+              "type": "minecraft:uniform",
+              "min_inclusive": {
+                "absolute": 300
+              },
+              "max_inclusive": {
+                "absolute": 400
+              }
+            }
+          },
+          {
             "weight": 1,
             "data": {
               "type": "minecraft:trapezoid",
               "min_inclusive": {
-                "absolute": 0
+                "absolute": 400
               },
               "max_inclusive": {
-                "absolute": 300
+                "absolute": 500
               }
             }
           }

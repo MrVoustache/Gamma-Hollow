@@ -1,13 +1,12 @@
 {
-  "feature": "gammahollow:ore_diamond_small",
+  "neoforge:conditions": [
+    { "type": "neoforge:mod_loaded", "modid": "modern_industrialization" }
+  ],
+  "feature": "gammahollow:ore_antimony_normal",
   "placement": [
     {
       "type": "minecraft:count",
-      "count": 25
-    },
-    {
-      "type": "minecraft:count",
-      "count": 10
+      "count": 75
     },
     {
       "type": "minecraft:in_square"
@@ -18,7 +17,7 @@
         "type": "minecraft:weighted_list",
         "distribution": [
           {
-            "weight": 24,
+            "weight": 10,
             "data": {
               "type": "minecraft:uniform",
               "min_inclusive": {
@@ -30,14 +29,14 @@
             }
           },
           {
-            "weight": 1,
+            "weight": 15,
             "data": {
               "type": "minecraft:trapezoid",
               "min_inclusive": {
                 "absolute": 250
               },
               "max_inclusive": {
-                "absolute": 350
+                "absolute": 500
               }
             }
           }
