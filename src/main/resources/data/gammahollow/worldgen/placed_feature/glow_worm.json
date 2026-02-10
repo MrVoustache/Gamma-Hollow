@@ -1,10 +1,10 @@
 {
-    "neoforge:conditions": [
-        {
-        "type": "neoforge:mod_loaded",
-        "modid": "biomesoplenty"
-        }
-    ],
+  "neoforge:conditions": [
+      {
+      "type": "neoforge:mod_loaded",
+      "modid": "biomesoplenty"
+      }
+  ],
   "feature": "biomesoplenty:glowworm_silk",
   "placement": [
     {
