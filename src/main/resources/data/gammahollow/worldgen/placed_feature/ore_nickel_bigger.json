@@ -1,4 +1,7 @@
 {
+  "neoforge:conditions": [
+    { "type": "neoforge:mod_loaded", "modid": "modern_industrialization" }
+  ],
   "feature": "gammahollow:ore_nickel_bigger",
   "placement": [
     {
