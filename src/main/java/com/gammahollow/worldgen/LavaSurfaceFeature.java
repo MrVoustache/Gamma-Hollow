@@ -9,6 +9,10 @@ import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
 
 public class LavaSurfaceFeature extends Feature<NoneFeatureConfiguration> {
+
+    static int LAVA_MIN = 900;
+    static int LAVA_MAX = 1000;
+    
     public LavaSurfaceFeature(Codec<NoneFeatureConfiguration> codec) {
         super(codec);
     }
@@ -22,13 +26,9 @@ public class LavaSurfaceFeature extends Feature<NoneFeatureConfiguration> {
         // Iterate through the 16x16 area of the chunk
         for (int x = 0; x < 16; ++x) {
             for (int z = 0; z < 16; ++z) {
-                // Target your specific Y range: [650, 750]
-                for (int y = 650; y <= 750; ++y) {
+                for (int y = LAVA_MIN; y <= LAVA_MAX; ++y) {
                     mutablePos.set(origin.getX() + x, y, origin.getZ() + z);
-                    
-                    // Only replace air. This keeps your ravine 'walls' intact!
                     if (level.getBlockState(mutablePos).isAir()) {
-                        // Use flag 2 to avoid unnecessary physics updates during generation
                         level.setBlock(mutablePos, Blocks.LAVA.defaultBlockState(), 2);
                     }
                 }

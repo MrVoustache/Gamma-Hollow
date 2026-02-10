@@ -18,10 +18,10 @@
             "data": {
               "type": "minecraft:trapezoid",
               "min_inclusive": {
-                "absolute": 350
+                "absolute": 500
               },
               "max_inclusive": {
-                "absolute": 450
+                "absolute": 700
               }
             }
           }

@@ -25,7 +25,7 @@
                 "absolute": 0
               },
               "max_inclusive": {
-                "absolute": 250
+                "absolute": 350
               }
             }
           },
@@ -37,7 +37,7 @@
                 "absolute": 350
               },
               "max_inclusive": {
-                "absolute": 600
+                "absolute": 750
               }
             }
           }

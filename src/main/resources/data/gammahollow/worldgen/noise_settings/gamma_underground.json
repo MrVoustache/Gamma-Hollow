@@ -12,7 +12,7 @@
   },
   "noise": {
     "min_y": 0,
-    "height": 1024,
+    "height": 1280,
     "size_horizontal": 1,
     "size_vertical": 2
   },
@@ -52,15 +52,15 @@
     "depth": {
       "type": "minecraft:y_clamped_gradient",
       "from_y": 64,
-      "to_y": 768,
+      "to_y": 1024,
       "from_value": 2.0,
       "to_value": -1.0
     },
     "ridges": "minecraft:overworld/ridges",
     "initial_density_without_jaggedness": {
       "type": "minecraft:y_clamped_gradient",
-      "from_y": 400,
-      "to_y": 550,
+      "from_y": 550,
+      "to_y": 700,
       "from_value": -1,
       "to_value": 1
     },
@@ -74,8 +74,12 @@
             "type": "minecraft:add",
             "argument1": {
               "type": "minecraft:add",
-              "argument1": "gammahollow:bedrock",
-              "argument2": "gammahollow:cheese_caves"
+              "argument1": {
+                "type": "minecraft:add",
+                "argument1": "gammahollow:bedrock",
+                "argument2": "gammahollow:winding_caves"
+              },
+              "argument2": "gammahollow:plateau_caves"
             },
             "argument2": "gammahollow:upper_caves"
           },
@@ -138,7 +142,7 @@
         "if_true": {
           "type": "minecraft:y_above",
           "anchor": {
-            "above_bottom": 750
+            "above_bottom": 1000
           },
           "surface_depth_multiplier": -15,
           "add_stone_depth": false
@@ -156,7 +160,7 @@
         "if_true": {
           "type": "minecraft:y_above",
           "anchor": {
-            "above_bottom": 660
+            "above_bottom": 900
           },
           "surface_depth_multiplier": -15,
           "add_stone_depth": false
@@ -174,7 +178,7 @@
         "if_true": {
           "type": "minecraft:y_above",
           "anchor": {
-            "above_bottom": 550
+            "above_bottom": 800
           },
           "surface_depth_multiplier": -15,
           "add_stone_depth": false

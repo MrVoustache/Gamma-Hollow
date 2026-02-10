@@ -25,10 +25,10 @@
             "data": {
               "type": "minecraft:uniform",
               "min_inclusive": {
-                "absolute": 200
+                "absolute": 400
               },
               "max_inclusive": {
-                "absolute": 500
+                "absolute": 600
               }
             }
           },
@@ -37,10 +37,10 @@
             "data": {
               "type": "minecraft:trapezoid",
               "min_inclusive": {
-                "absolute": 500
+                "absolute": 600
               },
               "max_inclusive": {
-                "absolute": 650
+                "absolute": 900
               }
             }
           }
