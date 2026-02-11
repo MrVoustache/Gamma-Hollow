@@ -1,0 +1,16 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "gammahollow:dripstone_caves",
+    "gammahollow:deep_dark"
+  ],
+  "features": [
+    "gammahollow:amethyst_crystal_down",
+    "gammahollow:amethyst_crystal_east",
+    "gammahollow:amethyst_crystal_north",
+    "gammahollow:amethyst_crystal_south",
+    "gammahollow:amethyst_crystal_up",
+    "gammahollow:amethyst_crystal_west"
+],
+  "step": "vegetal_decoration"
+}

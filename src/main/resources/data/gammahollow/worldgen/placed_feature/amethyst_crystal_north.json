@@ -1,0 +1,23 @@
+{
+  "feature": "gammahollow:amethyst_crystal_north",
+  "placement": [
+    { "type": "minecraft:count", "count": 100 },
+    { "type": "minecraft:in_square" },
+    {
+      "type": "minecraft:height_range",
+      "height": { "type": "minecraft:uniform", "min_inclusive": { "absolute": 0 }, "max_inclusive": { "absolute": 46 } }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:all_of",
+        "predicates": [
+          { "type": "minecraft:solid", "offset": [0, 0, 1]},
+          { "type": "minecraft:matching_blocks", "blocks": [ "minecraft:water" ] },
+          { "type": "minecraft:has_sturdy_face", "direction": "north", "offset": [0, 0, 1] }
+        ]
+      }
+    },
+    { "type": "minecraft:biome" }
+  ]
+}
