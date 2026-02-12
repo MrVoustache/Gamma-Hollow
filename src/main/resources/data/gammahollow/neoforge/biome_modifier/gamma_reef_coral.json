@@ -1,0 +1,13 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "gammahollow:dripstone_caves",
+    "gammahollow:deep_dark"
+  ],
+  "features": [
+    "gammahollow:tube_coral_tree",
+    "gammahollow:bubble_coral_tree",
+    "gammahollow:hybrid_coral_tree"
+],
+  "step": "vegetal_decoration"
+}

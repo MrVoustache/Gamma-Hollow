@@ -1,4 +1,4 @@
-package com.gammahollow.worldgen;
+package com.gammahollow.worldgen.feature;
 
 import com.mojang.serialization.Codec;
 import net.minecraft.core.BlockPos;
