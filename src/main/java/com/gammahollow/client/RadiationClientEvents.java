@@ -15,7 +15,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.RenderGuiLayerEvent;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 
-@EventBusSubscriber(modid = GammaHollow.MODID, bus = EventBusSubscriber.Bus.GAME, value = Dist.CLIENT)
+@EventBusSubscriber(modid = GammaHollow.MODID, value = Dist.CLIENT)
 public class RadiationClientEvents {
     private static float flashAlpha = 0.0f;
     private static final Random RANDOM = new Random();
