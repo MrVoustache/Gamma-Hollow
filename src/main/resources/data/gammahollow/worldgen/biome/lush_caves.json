@@ -75,12 +75,15 @@
       "gammahollow:spring_lava"
     ],
     [
+      "gammahollow:grass_patch",
+      "gammahollow:moss_patch",
+      "gammahollow:lush_caves_clay",
+      "gammahollow:lush_water_lights",
+      "gammahollow:lush_ground_lights",
       "gammahollow:glow_lichen",
       "gammahollow:patch_tall_grass",
       "gammahollow:moss_patch_ceiling",
       "gammahollow:cave_vine",
-      "gammahollow:lush_caves_clay",
-      "gammahollow:moss_patch",
       "gammahollow:rooted_azalea_tree",
       "gammahollow:spore_blossom",
       "gammahollow:vines"

@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 
 import com.gammahollow.effect.ModEffects;
 import com.gammahollow.worldgen.ModFeatures;
+import com.gammahollow.worldgen.ModPlacementModifiers;
 import com.mojang.logging.LogUtils;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
@@ -27,6 +28,7 @@ public class GammaHollow {
         ModEffects.register(modEventBus);
         modContainer.registerConfig(ModConfig.Type.CLIENT, Config.SPEC);
         ModFeatures.register(modEventBus);
+        ModPlacementModifiers.PLACEMENT_MODIFIERS.register(modEventBus);
     }
 
     private void registerPortals(CustomPortalRegistrationEvent event) {
