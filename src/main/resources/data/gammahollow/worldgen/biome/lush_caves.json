@@ -93,92 +93,127 @@
     ]
   ],
   "has_precipitation": true,
-  "spawn_costs": {},
+  "spawn_costs": {
+    "minecraft:bogged" : {
+      "energy_budget": 0.05,
+      "charge": 0.5
+    },
+    "minecraft:creeper" : {
+      "energy_budget": 0.05,
+      "charge": 0.5
+    },
+    "minecraft:cave_spider" : {
+      "energy_budget": 0.05,
+      "charge": 0.5
+    },
+    "minecraft:slime" : {
+      "energy_budget": 0.05,
+      "charge": 0.5
+    },
+    "minecraft:witch" : {
+      "energy_budget": 0.05,
+      "charge": 0.5
+    },
+    "minecraft:armadillo" : {
+      "energy_budget": 0.1,
+      "charge": 0.3
+    },
+    "minecraft:chicken" : {
+      "energy_budget": 0.1,
+      "charge": 0.3
+    },
+    "minecraft:fox" : {
+      "energy_budget": 0.1,
+      "charge": 0.3
+    },
+    "minecraft:frog" : {
+      "energy_budget": 0.1,
+      "charge": 0.3
+    },
+    "minecraft:ocelot" : {
+      "energy_budget": 0.1,
+      "charge": 0.3
+    },
+    "minecraft:parrot" : {
+      "energy_budget": 0.1,
+      "charge": 0.3
+    }
+  },
   "spawners": {
     "ambient": [
       {
-        "type": "minecraft:bat",
-        "maxCount": 8,
-        "minCount": 8,
-        "weight": 10
-      }
-    ],
-    "axolotls": [
+        "type": "minecraft:armadillo",
+        "maxCount" : 8,
+        "minCount" : 2,
+        "weight" : 10
+      },
       {
-        "type": "minecraft:axolotl",
-        "maxCount": 6,
-        "minCount": 4,
-        "weight": 10
+        "type": "minecraft:chicken",
+        "maxCount" : 4,
+        "minCount" : 2,
+        "weight" : 50
+      },
+      {
+        "type": "minecraft:fox",
+        "maxCount" : 2,
+        "minCount" : 1,
+        "weight" : 5
+      },
+      {
+        "type": "minecraft:frog",
+        "maxCount" : 2,
+        "minCount" : 1,
+        "weight" : 10
+      },
+      {
+        "type": "minecraft:ocelot",
+        "maxCount" : 3,
+        "minCount" : 1,
+        "weight" : 10
+      },
+      {
+        "type": "minecraft:parrot",
+        "maxCount" : 4,
+        "minCount" : 1,
+        "weight" : 20
       }
     ],
+    "axolotls": [],
     "creature": [],
     "misc": [],
     "monster": [
       {
-        "type": "minecraft:spider",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 100
-      },
-      {
-        "type": "minecraft:zombie",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 95
-      },
-      {
-        "type": "minecraft:zombie_villager",
-        "maxCount": 1,
-        "minCount": 1,
-        "weight": 5
-      },
-      {
-        "type": "minecraft:skeleton",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 100
+        "type": "minecraft:bogged",
+        "maxCount" : 3,
+        "minCount" : 1,
+        "weight" : 30
       },
       {
         "type": "minecraft:creeper",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 100
+        "maxCount" : 1,
+        "minCount" : 1,
+        "weight" : 20
+      },
+      {
+        "type": "minecraft:cave_spider",
+        "maxCount" : 4,
+        "minCount" : 2,
+        "weight" : 30
       },
       {
         "type": "minecraft:slime",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 100
-      },
-      {
-        "type": "minecraft:enderman",
-        "maxCount": 4,
-        "minCount": 1,
-        "weight": 10
+        "maxCount" : 2,
+        "minCount" : 1,
+        "weight" : 15
       },
       {
         "type": "minecraft:witch",
-        "maxCount": 1,
-        "minCount": 1,
-        "weight": 5
+        "maxCount" : 1,
+        "minCount" : 1,
+        "weight" : 5
       }
     ],
-    "underground_water_creature": [
-      {
-        "type": "minecraft:glow_squid",
-        "maxCount": 6,
-        "minCount": 4,
-        "weight": 10
-      }
-    ],
-    "water_ambient": [
-      {
-        "type": "minecraft:tropical_fish",
-        "maxCount": 8,
-        "minCount": 8,
-        "weight": 25
-      }
-    ],
+    "underground_water_creature": [],
     "water_creature": []
   },
   "temperature": 0.5
