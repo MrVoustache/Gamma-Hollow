@@ -72,21 +72,25 @@
     [],
     [
       "gammahollow:spring_water",
-      "gammahollow:spring_lava"
-    ],
-    [
+      "gammahollow:spring_lava",
       "gammahollow:grass_patch",
       "gammahollow:moss_patch",
       "gammahollow:lush_caves_clay",
-      "gammahollow:lush_water_lights",
-      "gammahollow:lush_ground_lights",
-      "gammahollow:glow_lichen",
       "gammahollow:patch_tall_grass",
-      "gammahollow:moss_patch_ceiling",
-      "gammahollow:cave_vine",
+      "gammahollow:moss_patch_ceiling"
+    ],
+    [
+      "gammahollow:jungle_bush",
+      "gammahollow:jungle_tree",
+      "gammahollow:rooted_jungle_tree",
       "gammahollow:rooted_azalea_tree",
-      "gammahollow:spore_blossom",
-      "gammahollow:vines"
+      "gammahollow:rooted_acacia",
+      "gammahollow:spore_blossom"
+    ],
+    [
+      "gammahollow:glow_lichen",
+      "gammahollow:cave_vine",
+      "gammahollow:jungle_lights"
     ],
     [
       "minecraft:freeze_top_layer"
