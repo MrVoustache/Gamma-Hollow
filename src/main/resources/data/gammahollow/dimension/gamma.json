@@ -9,11 +9,11 @@
         {
           "biome": "gammahollow:gamma_surface",
           "parameters": {
-            "temperature": 0.0,
-            "humidity": 0.0,
-            "continentalness": -0.8,
+            "temperature": 0.1,
+            "humidity": 0.7,
+            "continentalness": 0.0,
             "erosion": 0.0,
-            "weirdness": 0.0,
+            "weirdness": 0.5,
             "depth": -0.8,
             "offset": 0.0
           }
