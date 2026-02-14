@@ -1,5 +1,7 @@
 package com.gammahollow.worldgen.feature;
 
+import com.gammahollow.block.MimicLeafBlockEntity;
+import com.gammahollow.init.ModBlocks;
 import com.mojang.serialization.Codec;
 
 import net.minecraft.core.BlockPos;
@@ -9,6 +11,7 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.CaveVines;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
@@ -42,8 +45,14 @@ public class JungleVineLightFeature extends Feature<NoneFeatureConfiguration> {
             for (int i = 0; i < length; i++) {
                 BlockPos currentPos = origin.below(i);
                 BlockPos neighbor = currentPos.relative(dir);
+
+                // SAFETY: Only check neighbors if they are within the loaded generation area
+                // WorldGenLevel/WorldGenRegion has limits on what it can see.
+                if (level instanceof WorldGenLevel wgl && !wgl.ensureCanWrite(neighbor)) {
+                    continue; 
+                }
+
                 BlockState neighborState = level.getBlockState(neighbor);
-                
                 // If there's already a vine next to us OR the path is blocked, abort
                 if (neighborState.is(Blocks.CAVE_VINES) || neighborState.is(Blocks.CAVE_VINES_PLANT) || !level.isEmptyBlock(currentPos)) {
                     return false; 
@@ -55,7 +64,13 @@ public class JungleVineLightFeature extends Feature<NoneFeatureConfiguration> {
         // If the anchor is a leaf, we swap it for Mangrove Roots so the vine doesn't pop.
         // Logs are already sturdy, so we leave them alone.
         if (blockAbove.is(BlockTags.LEAVES)) {
-            level.setBlock(supportPos, Blocks.MANGROVE_ROOTS.defaultBlockState(), 2 | 16);
+            // 1. Place the Mimic Block
+            BlockState originalLeaf = level.getBlockState(supportPos);
+            level.setBlock(supportPos, ModBlocks.MIMIC_LEAF.get().defaultBlockState(), 3);
+            BlockEntity be = level.getBlockEntity(supportPos);
+            if (be instanceof MimicLeafBlockEntity mimic) {
+                mimic.setMimicState(originalLeaf);
+            }
         }
 
         // 4. Place the Vine Column
@@ -75,7 +90,7 @@ public class JungleVineLightFeature extends Feature<NoneFeatureConfiguration> {
                 }
 
                 // Use flag 2 (Update clients) and 16 (Prevent neighbor reactions)
-                level.setBlock(currentPos, stateToPlace, 2 | 16);
+                level.setBlock(currentPos, stateToPlace, 3);
             } else {
                 break; 
             }

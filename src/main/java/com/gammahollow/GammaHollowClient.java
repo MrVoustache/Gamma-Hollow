@@ -1,6 +1,10 @@
 package com.gammahollow;
 
+import com.gammahollow.init.ModBlocks;
+
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
@@ -27,5 +31,8 @@ public class GammaHollowClient {
         // Some client setup code
         // GammaHollow.LOGGER.info("HELLO FROM CLIENT SETUP");
         // GammaHollow.LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+        event.enqueueWork(() -> {
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.MIMIC_LEAF.get(), RenderType.cutoutMipped());
+        });
     }
 }
