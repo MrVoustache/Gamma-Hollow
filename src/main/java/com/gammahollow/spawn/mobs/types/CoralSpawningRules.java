@@ -19,8 +19,8 @@ import net.minecraft.world.level.block.Blocks;
 
 public abstract class CoralSpawningRules<T extends Mob> extends AbstractMobSpawningRules<T> {
 
-    public static int GROUP_SPAWN_RADIUS = 3; // Radius around the center point to search for valid spawn positions (radius of the group)
-    public static int MAX_SPAWN_ATTEMPTS = 10; // Max attempts to find valid spawn positions for members ofthe group
+    public static int GROUP_SPAWN_RADIUS = 4; // Radius around the center point to search for valid spawn positions (radius of the group)
+    public static int MAX_SPAWN_ATTEMPTS = 20; // Max attempts to find valid spawn positions for members ofthe group
     public static int MAX_SCAN_HEIGHT = 10; // Max height to scan downwards for coral blocks when trying to find valid spawn positions (to allow spawning in water above coral)
 
     public CoralSpawningRules(EntityType<T> entityType, int spawnWeight, int spawnCap, int minGroupSize, int maxGroupSize) {

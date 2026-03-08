@@ -5,6 +5,7 @@ import java.util.List;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.tags.TagKey;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
@@ -12,6 +13,7 @@ import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.SpawnGroupData;
 import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.phys.AABB;
 import net.neoforged.neoforge.event.EventHooks;
 
@@ -33,6 +35,26 @@ public abstract class AbstractMobSpawningRules<T extends Mob> {
 
     public boolean canSpawnInBiome(Holder<Biome> biome) {
         return true;
+    }
+
+    public boolean assertBlockBelowIs(ServerLevel level, BlockPos pos, int maxDistance, List<Block> expectedBlocks) {
+        for (int i = 1; i <= maxDistance; i++) {
+            BlockPos checkPos = pos.below(i);
+            if (expectedBlocks.contains(level.getBlockState(checkPos).getBlock())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean assertBlockBelowIs(ServerLevel level, BlockPos pos, int maxDistance, TagKey<Block> expectedBlocks) {
+        for (int i = 1; i <= maxDistance; i++) {
+            BlockPos checkPos = pos.below(i);
+            if (level.getBlockState(checkPos).is(expectedBlocks)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public abstract List<BlockPos> getSpawnPositions(ServerLevel level, BlockPos center, RandomSource random, int groupSize);

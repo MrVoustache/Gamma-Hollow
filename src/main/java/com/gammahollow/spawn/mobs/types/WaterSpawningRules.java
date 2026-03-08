@@ -10,6 +10,7 @@ import com.gammahollow.util.ModBiomes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
@@ -18,15 +19,15 @@ import net.minecraft.world.level.block.Blocks;
 
 public abstract class WaterSpawningRules<T extends Mob> extends AbstractMobSpawningRules<T> {
 
-    public static int GROUP_SPAWN_RADIUS = 3; // Radius around the center point to search for valid spawn positions (radius of the group)
-    public static int MAX_SPAWN_ATTEMPTS = 10; // Max attempts to find valid spawn positions for members ofthe group
+    public static int GROUP_SPAWN_RADIUS = 4; // Radius around the center point to search for valid spawn positions (radius of the group)
+    public static int MAX_SPAWN_ATTEMPTS = 20; // Max attempts to find valid spawn positions for members ofthe group
     
     public WaterSpawningRules(EntityType<T> entityType, int spawnWeight, int spawnCap, int minGroupSize, int maxGroupSize) {
         super(entityType, spawnWeight, spawnCap, minGroupSize, maxGroupSize);
     }
 
     public boolean canSpawnAtPosition(ServerLevel level, BlockPos pos) {
-        return level.getBlockState(pos).is(Blocks.WATER) && level.getFluidState(pos).isSource();
+        return level.getBlockState(pos).is(Blocks.WATER) && level.getFluidState(pos).isSource() && (assertBlockBelowIs(level, pos, 20, BlockTags.DEEPSLATE_ORE_REPLACEABLES));
     }
 
     public boolean canSpawnInBiome(Holder<Biome> biome) {

@@ -1,8 +1,6 @@
 package com.gammahollow.spawn;
 
 import java.util.List;
-import java.util.Set;
-import java.util.concurrent.ConcurrentHashMap;
 
 import com.gammahollow.spawn.mobs.lush_animals.ArmadilloSpawningRule;
 import com.gammahollow.spawn.mobs.lush_animals.BatSpawningRule;
@@ -30,25 +28,18 @@ import com.gammahollow.spawn.mobs.reef_animals.PufferfishSpawningRule;
 import com.gammahollow.spawn.mobs.reef_animals.SalmonSpawningRule;
 import com.gammahollow.spawn.mobs.reef_animals.TropicalFishSpawningRule;
 import com.gammahollow.spawn.mobs.reef_animals.TurtleSpawningRule;
-import com.gammahollow.util.ModBiomes;
 import com.gammahollow.util.ModDimensions;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.server.level.FullChunkStatus;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.biome.Biome;
-import net.minecraft.world.level.chunk.LevelChunk;
 import net.minecraft.world.phys.AABB;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.event.level.ChunkDataEvent;
-import net.neoforged.neoforge.event.level.ChunkEvent;
 import net.neoforged.neoforge.event.tick.LevelTickEvent;
 
 @EventBusSubscriber(modid = "gammahollow")
