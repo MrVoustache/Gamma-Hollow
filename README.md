@@ -1,6 +1,6 @@
 # Gamma-Hollow
 
-This mod adds a new dimension that is ideal for mining. It features ~1000 blocks high terrain with ~800 blocks of a cave system with very dense ore distributions.
+This mod adds a new dimension that is ideal for mining. It features ~1000 blocks high terrain with ~800 blocks of a cave system with very dense ore distributions. It is available on Curse Forge.
 
 ## Dimension
 
@@ -18,5 +18,6 @@ Some other odd features were necessary. To light up the lush caves, glow vines w
 
 A few features are to be added:
 - A more vibrant sky box with a supernova.
+- Port to other Minecraft versions and maybe Fabric.
 - Custom creatures and monsters?
 - Compatibility with other mods?
