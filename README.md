@@ -1,25 +1,22 @@
+# Gamma-Hollow
 
-Installation information
-=======
+This mod adds a new dimension that is ideal for mining. It features ~1000 blocks high terrain with ~800 blocks of a cave system with very dense ore distributions.
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+## Dimension
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
+The dimension itself is described in **resources** like in a data pack. A few features were added with a Java implementation (such as the lava surface). Optional features are described with tags (for optional mod dependencies).
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
+## Radiation
 
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
+The radiation system is mostly described through Java and adds its own damage type and status effect. For each entity, it scans upwards and outwards for open access to the sky (transparent blocks are not allowed). While exposed to the sky, the status effect gets worse fives faster than it otherwise decays. Every five minutes, it moves up to the next level, until level four, where its timer keeps increasing. It also gives off blinding flashes.
 
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+## Other Features
+
+Some other odd features were necessary. To light up the lush caves, glow vines were needed on leaves blocks, which required a "mimic" leaves block. Also, as most animals are not designed to spawn in caves, a custom spawner system was implemented.
+
+## To-Do
+
+A few features are to be added:
+- A more vibrant sky box with a supernova.
+- Custom creatures and monsters?
+- Compatibility with other mods?
