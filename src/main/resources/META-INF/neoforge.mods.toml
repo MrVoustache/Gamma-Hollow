@@ -8,7 +8,8 @@ modId="gammahollow"
 version="1.0.0"
 displayName="Gamma-Hollow"
 authors="MrVoustache"
-description="Discover a new mining world on the Gamma planet, with a complex hollow network of caves and a scorched surface."
+description="Discover a new mining world on the Gamma planet, with a complex hollow network of mesmerizing caves and a scorched surface."
+logoFile="icon.png"
 
 # Dependency for Custom Portal API
 [[dependencies.gammahollow]]
